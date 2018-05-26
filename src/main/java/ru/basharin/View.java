@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class View {
     private final Scanner scanner;
-    private ReadDataOfFile rdo = null;
 
     public View(Scanner scanner) {
         this.scanner = scanner;
@@ -28,11 +27,11 @@ public class View {
         }
     }
 
-    public void inputData() {
+    private void inputData() {
         String input;
         int numberFirst;
         while (true) {
-            System.out.println("Введите новые значения");
+            System.out.println("Вводите значения коэффициентов целыми числами");
             while (true) {
                 System.out.println("Введите первый коэффициент. Для отмены ввода введите #");
                 System.out.println("**************************");
@@ -84,7 +83,7 @@ public class View {
         }
     }
 
-    public void readDataFromFileAndResult() {
+    private void readDataFromFileAndResult() {
         ReadDataOfFile readDataOfFile = new ReadDataOfFile();
         for (NumberData answer : readDataOfFile.readNumberFromFile()) {
             SolutionQuadraticEquations sqe = new SolutionQuadraticEquations();

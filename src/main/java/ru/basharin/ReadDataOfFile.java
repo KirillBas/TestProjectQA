@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ReadDataOfFile {
     private static final String CLIENT_FILE_NAME = "data.txt";
     private final File file = new File(CLIENT_FILE_NAME);
-    private List<NumberData> result = new ArrayList<>();
+    private final List<NumberData> result = new ArrayList<>();
 
     public List<NumberData> readNumberFromFile() {
        try(Scanner scanner = new Scanner(new FileInputStream(file))) {
@@ -23,7 +23,7 @@ public class ReadDataOfFile {
                result.add(numberData);
            }
        } catch (FileNotFoundException | NumberFormatException e) {
-           System.out.println("Неверные данные в файле " + file.getName());;
+           System.out.println("Неверные данные в файле " + file.getName());
        }
        return result;
     }

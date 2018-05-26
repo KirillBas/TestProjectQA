@@ -3,9 +3,9 @@ package main.java.ru.basharin;
 import java.util.Objects;
 
 public class NumberData {
-    private int numberFirst;
-    private int numberSecond;
-    private int numberThird;
+    private final int numberFirst;
+    private final int numberSecond;
+    private final int numberThird;
 
     public NumberData(int numberFirst, int numberSecond, int numberThird) {
         this.numberFirst = numberFirst;
